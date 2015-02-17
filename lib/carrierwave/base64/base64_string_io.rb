@@ -17,7 +17,7 @@ module Carrierwave
       end
 
       def original_filename
-        File.basename("image.#{@image_format}")
+        File.basename("image_#{DateTime.now.to_i.to_s}.#{@image_format}")
       end
 
       private
